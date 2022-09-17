@@ -35,6 +35,23 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      let valueDisplays = document.querySelectorAll(".num");
+      let interval = 500;
+      console.log(valueDisplays);
+      valueDisplays.forEach((valueDisplay) => {
+        let startValue = 0;
+        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+        let duration = Math.floor(interval / endValue);
+        let counter = setInterval(function () {
+          startValue += 1;
+          valueDisplay.textContent = startValue;
+          if (startValue === endValue) {
+            clearInterval(counter);
+          }
+        }, duration);
+      });
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 body{
     margin: 0px;
     padding: 0px;
@@ -8,7 +9,7 @@ body{
     min-height: 60vh;
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-        url("./garage1.jpg");
+        url("/static/image/garage1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -64,6 +65,8 @@ nav img {
 }
 
 .whbtn:hover {
+    text-decoration: none;
+    color: white;
     border: 1px solid rgb(64, 39, 121);
     background-color: rgb(64, 39, 121);
     transition: 0.5s;
