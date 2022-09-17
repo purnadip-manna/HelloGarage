@@ -1,6 +1,26 @@
-{% extends 'base.html' %}
-
-{% block body %}
-Slot Available : {{ slot_available }}<br>
-No of Cars : {{ cars }}
+{% extends 'base.html' %} {% block body %}
+<!-- Slot Available : {{ slot_available }}<br>
+No of Cars : {{ cars }} -->
+<section class="sub-header">
+  <div class="box">
+    <h1>Bunty Garage</h1>
+    <p>I wish I could have been born in Anime The real world is so boring</p>
+    <a href="#" class="whbtn">Admin Bashboard</a>
+  </div>
+</section>
+<!-- available slots -->
+<section class="anime">
+  <h1>E-Garage</h1>
+  <p class="anip">location: Bhaskur,Baluhati,Howrah</p>
+  <div class="anirows">
+    <div class="anicol">
+      <h2>Available Slots</h2>
+      <span class="num" data-val="{{ slot_available }}">00</span>
+    </div>
+    <div class="anicol">
+      <h2>Filled Slots</h2>
+      <span class="num" data-val="{{ cars }}">00</span>
+    </div>
+  </div>
+</section>
 {% endblock body %}
