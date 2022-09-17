@@ -1,16 +1,15 @@
 import datetime
-from unicodedata import name
 from django.db import models
 
 # Create your models here.
 class ParkingRecord(models.Model):
     id = models.AutoField(primary_key=True, null=False)
     name = models.CharField(max_length=255)
-    phnno = models.BigIntegerField(max_length=10, null=False)
+    phnno = models.BigIntegerField(null=False)
     carno = models.CharField(max_length=15, null=False)
-    regtime = models.DateTimeField(default=datetime.datetime.now())
+    regtime = models.DateTimeField()
     exittime = models.DateTimeField()
-    slotno = models.CharField()
+    slotno = models.CharField(max_length=10)
     
 
 class Garage(models.Model):
