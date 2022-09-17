@@ -1,0 +1,67 @@
+.admin_body{
+    background-color: wheat;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+table tr:first-child th:first-child {
+    border-top-left-radius: 20px;
+}
+
+table tr:first-child th:last-child {
+    border-top-right-radius: 20px;
+}
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+table{
+    border-collapse: collapse;
+    width: 80%; 
+    margin: auto;
+    text-align: center;   
+}
+tr:nth-child(even){
+    background-color: #f5f5f5;
+}
+tr:hover{
+    background-color: #f5f5f5;
+}
+td, th{
+    padding: 20px;
+}
+th{
+    text-transform: uppercase;
+    font-size: large;
+}
+thead{
+    background-color: #36304a;
+    color: #ffffff;
+}
+.table_head:hover{
+    background-color: #36304a;
+}
+tbody{
+    background-color: #ffffff;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    margin: 50px auto;
+    width: 70%;
+    text-transform: uppercase;
+    align-items: center;
+}
+.buttonss{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #36304a;
+    color: #ffffff;
+}
+.title{
+    font-size: 85px;
+}
