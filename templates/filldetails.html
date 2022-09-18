@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}{{carno}}{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 align="center">Hello Garage</h1>
+    
+    <form class="d-flex flex-column justify-content-between" style="box-shadow: 5px 20px 20px 4px rgb(0 0 0 / 51%);
+    border-radius: 10px; padding:20px"
+    action = "{% url 'vregister' %}"
+    method = "POST"
+    >
+        <input type="number" name="gid" value="{{gid}}" hidden>
+        <label><b>Entry Time: {{regtime}}</b></label>
+        <div class="form-group">
+          <label>Vehicle's No: <big>{{carno}}</big></label>
+          <input type="text" class="form-control" name="vno" value="{{carno}}" hidden>
+        </div>
+        <div class="form-group">
+          <label>Phone No:</label>
+          <input type="text" class="form-control" name="phnno">
+        </div>
+        <div class="form-group">
+            <label>Vehicle Type:</label>
+            <input type="text" class="form-control" name="cartype" placeholder="Example input" value="{% if isCar %}Car{% else %}Bike{% endif %}" disabled>
+        </div>
+        <button class="btn btn-success">Register</button>
+    </form>
+</div>
+{% endblock body %}

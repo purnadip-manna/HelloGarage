@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="{% static 'css/login_style.css' %}"
+      type="text/css"
+      media="screen"
+    />
+    <title>Login</title>
+</head>
+<body>
+    <div class="container" id="container" style="margin-top:5rem">
+        <div class="form-container sign-up-container">
+        
+        <div class="form">
+            <h1>Create Account</h1>
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="cpassword" placeholder="Confirm Password">
+            <input type="text" name="garage_name" placeholder="Garage Name">
+            <!-- <Textarea rows="4" cols="50" placeholder="Garage Address"></Textarea> -->
+            <Textarea rows="3" cols="50" placeholder="Garage Address"></Textarea>
+            <p class="light">BIKE PARKING DETAILS</p>
+            <div>
+                    <input class="slots" type="number" name="bike_slots" placeholder="Slots">   
+                <span>
+                    <input class="hourly" type="number" name="bike_rate" placeholder="Hourly Rate">
+                <span>
+            </div>
+            <p class="light">CAR PARKING DETAILS</p>
+            <div>
+                <!-- Bike -->
+                <input class="slots" type="number" name="car_slots" placeholder="Slots">
+                <span>
+                    <input class="hourly" type="number" name="car_rate" placeholder="Hourly Rate">
+                <span>
+            </div>
+            <button>SignUp</button>
+        </div>
+        </div>
+        <div class="form-container sign-in-container">
+            <div class="form">
+            <h1>Sign In</h1>
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <a href="#">Forgot Your Password</a>
+            <a href="/dashboard"><button>Sign In</button></a>
+            </div>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <script type="text/javascript">
+            const signUpButton = document.getElementById('signUp');
+            const signInButton = document.getElementById('signIn');
+            const container = document.getElementById('container');
+        
+            signUpButton.addEventListener('click', () => {
+                container.classList.add("right-panel-active");
+            });
+            signInButton.addEventListener('click', () => {
+                container.classList.remove("right-panel-active");
+            });
+        </script>
+        
+</body>
+</html>

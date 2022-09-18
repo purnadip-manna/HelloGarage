@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Panel{% endblock title %}
+
+{% load static %}
+{% block header %}
+<link
+      rel="stylesheet"
+      href="{% static 'css/style_admin.css' %}"
+      type="text/css"
+      media="screen"
+    />
+{% endblock header %}
+
+{% block body %}
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1><b>{{name}}</b></h1>
+            <p class="anip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                {{address}}
+                <br>
+                <a href="/gapp/allrecords" class="whbtn">All Records</a>
+                <a href="/gapp/cctv" class="whbtn">CCTV</a>
+                <a href="/gapp/settings" class="whbtn">Settings</a>
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <p align="right">
+                Cars: <b>{{car}}/{{car_slot}}</b><br>
+                Bikes: <b>{{bike}}/{{bike_slot}}</b><br>
+                Bike Parking Hourly Rate : <b><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-currency-rupee" style="padding-top:5px" viewBox="0 0 16 16">
+                    <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/>
+                </svg>{{bike_rate}}/hr</b>
+                <br>
+                Car Parking Hourly Rate : <b><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-currency-rupee" style="padding-top:5px" viewBox="0 0 16 16">
+                <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/>
+                </svg>{{car_rate}}/hr</b>
+
+            </p>
+        </div>
+    </div>
+
+        
+</div>
+<div class="container">
+    <h3>Live Status:</h3>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Car No.</th>
+            <th>Phone No.</th>
+            <th>Entry Time</th>
+            <th>Exit Time</th>
+            <th>Type</th>
+            <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for vehicle in vehicles %}
+                <tr>
+                    <td>{{vehicle.carno}}</td>
+                    <td>{{vehicle.phnno}}</td>
+                    <td>{{vehicle.regtime}}</td>
+                    {% if vehicle.regtime.hour == vehicle.exittime.hour and vehicle.regtime.minute == vehicle.exittime.minute %}<td> -- </td>{% else %}<td>{{vehicle.exittime}}</td>{% endif %}
+                    {% if vehicle.isCar %}
+                        <td>Car</td>
+                    {% else %}
+                        <td>Bike</td>
+                    {% endif %}
+                    <td>{{vehicle.amt}}</td>
+                </tr>
+            {% endfor %}
+        
+        </tbody>
+    </table>
+</div>
+{% endblock body %}

@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 body{
     margin: 0px;
     padding: 0px;
 }
 .sub-header {
-    min-height: 60vh;
+    min-height: 50vh;
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
         url("/static/image/garage1.jpg");
@@ -42,7 +41,7 @@ nav img {
 }
 
 .box h1 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 50px;
 }
 
@@ -120,7 +119,7 @@ h2 {
 .anicol:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.559);
 }
-.num{
+#shownum{
     font-family: 'Ubuntu', sans-serif;
     font-size: 60px;
     font-weight: 600;

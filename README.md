@@ -2,7 +2,7 @@
 
 1. Install the dependencies:
 
-`pip install -r requirement.txt`
+`pip install django`
 
 2. Run the Django Server
 

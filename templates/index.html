@@ -1,26 +1,73 @@
-{% extends 'base.html' %} {% block body %}
-<!-- Slot Available : {{ slot_available }}<br>
-No of Cars : {{ cars }} -->
-<section class="sub-header">
-  <div class="box">
-    <h1>Bunty Garage</h1>
-    <p>I wish I could have been born in Anime The real world is so boring</p>
-    <a href="#" class="whbtn">Admin Bashboard</a>
-  </div>
-</section>
-<!-- available slots -->
-<section class="anime">
-  <h1>E-Garage</h1>
-  <p class="anip">location: Bhaskur,Baluhati,Howrah</p>
-  <div class="anirows">
-    <div class="anicol">
-      <h2>Available Slots</h2>
-      <span class="num" data-val="{{ slot_available }}">00</span>
-    </div>
-    <div class="anicol">
-      <h2>Filled Slots</h2>
-      <span class="num" data-val="{{ cars }}">00</span>
-    </div>
-  </div>
-</section>
-{% endblock body %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Garage!</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      .header {
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(4, 9, 30, 0.7),
+            rgba(4, 9, 30, 0.7)
+          ),
+          url("/static/image/back.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .box {
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+      }
+      .box h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 69px;
+      }
+      .box p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+      }
+      .whbtn {
+        font-family: 'Montserrat', sans-serif;
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        background: transparent;
+        border: 1px solid white;
+        padding: 7px 25px;
+        margin: 12px;
+        border-radius: 12px;
+      }
+
+      .whbtn:hover {
+        border: 1px solid #f34336;
+        background-color: #f34336;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="header">
+      <div class="box">
+        <h1>Hello Garage</h1>
+        <p>
+          Welcome to Hello Garage. We make your cars happy. Relief from parking hassel.
+        </p>
+        <a href="/dashboard" class="whbtn">Admin Dashboard</a>
+      </div>
+    </section>
+  </body>
+</html>
