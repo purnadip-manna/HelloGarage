@@ -103,6 +103,8 @@ https://hello-garage-hg.herokuapp.com/
 
 ![qr](images/qr.png)
 
+_(*Due to some reason, It is not deployed properly but the codebase of CarNoDetection is present inside `CarNoDetection` directory)_
+
 ## 6. Workflow
 ![Carnodetection](images/carnodetection.png)
 
