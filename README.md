@@ -10,15 +10,24 @@ ____
 ## INDEX
 ____
 
-1. Installation Process
-2. Deployed Prototype
-3. Working Endpoints
-4. Car No Detection System
-5. Workflow
-6. Yet to Implement
+1. [Tech-Stack](#1-tech-stack)
+2. [Installation Process](#2-installation-process)
+3. [Deployed Prototype](#3-deployed-prototype)
+4. [Working Endpoints](#4-working-endpoints)
+5. [Car No Detection System](#5-car-number-detection-system)
+6. [Workflow](#6-workflow)
+7. [Yet to Implement](#7-yet-to-implement)
+8. [Future Plans](#8-future-plans)
 ____
 
-## 1. Installation Process
+## 1. Tech-Stack
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+
+## 2. Installation Process
 1. Install Django
 
 `pip install django`
@@ -31,7 +40,7 @@ ____
 
 `python manage.py runserver`
 
-## 2. Deployed Prototype
+## 3. Deployed Prototype
 We have deployed our project on Heroku and here is the link:
 https://hello-garage-hg.herokuapp.com/
 
@@ -41,7 +50,7 @@ https://hello-garage-hg.herokuapp.com/
 >
 > Password: password
 
-## 3. Working Endpoints
+## 4. Working Endpoints
 
 **For Admin:**
 
@@ -67,7 +76,7 @@ https://hello-garage-hg.herokuapp.com/
 - Exit & Amount Calculation of a registerd Vehicle (http://hello-garage-hg.herokuapp.com/gapp/exitverify/\<carno>/\<garageid>)
 > Fetch Details of registerd vehicle and send OTP to the registered Phone Number and redirect to OTP verification Page.
 
-## 4. Car Number Detection System
+## 5. Car Number Detection System
 - It is a separate system from our main Backend. It will be installed in every garage.
 - Take snap of Car's front face at Entry Time.
 - Detect Car Number.
@@ -78,7 +87,39 @@ https://hello-garage-hg.herokuapp.com/
 - Generate a QR (*Exit & Amount Calculation of a registerd Vehicle*)
 - After successful payment, Gate of exit point will be opened.
 
-## 5. Workflow
+**Index:**
+
+![index](images/index.png)
+
+**Entry Time:**
+
+![entry](images/entry.png)
+
+**Exit Time:**
+
+![exit](images/exit.png)
+
+**After Submit Generate QR Code:**
+
+![qr](images/qr.png)
+
+## 6. Workflow
+![Carnodetection](images/carnodetection.png)
+
+## 7. Yet to Implement
+_*Due to shortage of time, some functionalities are yet to implement_
+- Sign Up functionality (of Admin-Garage)
+- Garage Profile
+- All Parking Records of Garage
+- Integrate payment gateway
+- Live CCTV footage
+- Get Garage Location using Map
+- Give CCTV access to User to find perfect location for car parking
+
+## 8. Future Plans
+- Integrating both Private & Public Garages
+- Install CCTVs in every slots to find the location of a specific vehicle very easily
 
 
-## 6. Yet to Implement
+
+## <center>Thank You</center>
