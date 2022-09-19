@@ -44,13 +44,14 @@
         </div>
         </div>
         <div class="form-container sign-in-container">
-            <div class="form">
+            <form class="form" method="POST" action="{%url 'login_auth'%}">
+                {% csrf_token %}
             <h1>Sign In</h1>
             <input type="email" name="email" placeholder="Email">
             <input type="password" name="password" placeholder="Password">
             <a href="#">Forgot Your Password</a>
             <a href="/dashboard"><button>Sign In</button></a>
-            </div>
+            </form>
         </div>
         <div class="overlay-container">
             <div class="overlay">
