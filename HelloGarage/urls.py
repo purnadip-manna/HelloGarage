@@ -19,7 +19,7 @@ from .views import index, home
 
 urlpatterns = [
     path("", index),
-    path("dashboard/", home),
+    path("dashboard/", home, name="homepage"),
     path("admin/", admin.site.urls),
     path('user/', include('user.urls')),
     path('gapp/', include('gapp.urls'))
